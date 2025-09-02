@@ -5,25 +5,29 @@
   $grade = null;
   $remarks = null;
   
-  if ($score >= 90) {
-    $grade = "A";
+  if ($score >= 95 && $score <= 100) {
+    $grade = "Excellent";
     $remarks = "Outstanding Performance!";
   } 
-  else if ($score >= 80) {  
-      $grade = "B";
+  else if ($score >= 90 && $score <= 94) {  
+      $grade = "Very Good";
       $remarks = "Great Job!";
   } 
-  else if ($score >= 75) {  
-      $grade = "C";
+  else if ($score >= 85 && $score <= 89) {  
+      $grade = "Good";
       $remarks = "Good Effort, Keep It Up!";
   } 
-  else if ($score >= 70) {  
-      $grade = "D";
+  else if ($score >= 75 && $score <= 84) {  
+      $grade = "Needs Improvement";
       $remarks = "Work harder next time.";
   } 
-  else {
-      $grade = "F";
+  else if($score < 75 && $score >= 0){
+      $grade = "Failed";
       $remarks = "You need to improve.";
+  }
+  else{
+    $grade = "Invalid";
+    $remarks = "Enter a valid score (0-100)";
   }
 ?>
 
