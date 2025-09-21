@@ -1,0 +1,313 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.biodata-container {
+  width: 1000px;
+  border: 1px solid black;
+  padding: 20px;
+  padding-bottom: 100px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  flex: 1;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 900;
+  color: #2e2e2e;
+  margin-left: 100px;
+}
+
+#fileToUpload {
+  display: none;
+}
+
+.photo-box {
+  width: 150px;
+  height: 150px;
+  border: 2px dashed #2e2e2e;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.photo-box:hover {
+  background-color: #efefef;
+}
+
+/* Image fills the box but hidden by default */
+.photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.personal-data,
+.educational-background {
+  background-color: #2e2e2e;
+  color: white;
+  margin-top: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.personal-data-title,
+.educational-background-title {
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.educational-background {
+  margin-top: 10px;
+}
+
+.first-form {
+  margin-top: 10px;
+  border: 1px solid #2e2e2e;
+  border-radius: 10px;
+
+  padding: 20px;
+  /* added */
+}
+
+.personal-data,
+.first-form {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.PDNG {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* added - 2 columns */
+  gap: 15px 30px;
+  /* added - spacing */
+}
+
+.PDNG div {
+  display: grid;
+  /* added */
+  grid-template-columns: 130px 1fr;
+  /* added - label + input */
+  align-items: center;
+  /* added */
+  gap: 10px;
+  /* added */
+}
+
+.CP {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: grid;
+  /* changed from row */
+  grid-template-columns: 1fr;
+  /* 1 column */
+  gap: 15px;
+  /* spacing */
+}
+
+.CP div {
+  display: grid;
+  /* added */
+  grid-template-columns: 130px 1fr;
+  /* label + input */
+  align-items: center;
+  /* added */
+  gap: 10px;
+  /* added */
+}
+
+input,
+select {
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 5px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.CP2 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: grid;
+  /* changed from row */
+  grid-template-columns: 1fr;
+  /* 1 column */
+  gap: 15px;
+  /* spacing */
+}
+
+.CP2 div {
+  display: grid;
+  /* added */
+  grid-template-columns: 350px 1fr;
+  /* label + input */
+  align-items: center;
+  /* added */
+  gap: 10px;
+  /* added */
+}
+
+.CP3 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: grid;
+  /* changed from row */
+  grid-template-columns: 1fr;
+  /* 1 column */
+  gap: 15px;
+  /* spacing */
+}
+
+.CP3 div {
+  display: grid;
+  /* added */
+  grid-template-columns: 130px 1fr;
+  /* label + input */
+  align-items: center;
+  /* added */
+  gap: 10px;
+  /* added */
+}
+
+.three-columns {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  /* added - 2 columns */
+  gap: 15px 30px;
+  /* added - spacing */
+}
+
+.three-columns div {
+  display: grid;
+  /* added */
+  grid-template-columns: 130px 1fr;
+  /* added - label + input */
+  align-items: center;
+  /* added */
+  gap: 10px;
+  /* added */
+}
+
+.last-section {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.last-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* added - 2 columns */
+  gap: 8px;
+  /* added - spacing */
+  border: none;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.last-grid div {
+  display: grid;
+  /* added */
+  grid-template-columns: 130px 1fr;
+  /* added - label + input */
+  align-items: center;
+  /* added */
+  gap: 10px;
+  /* added */
+}
+
+.last-right {
+  display: flex;
+  flex-direction: column;
+  /* stack text + signature */
+  justify-content: flex-end;
+  /* push content to bottom */
+  align-items: flex-end;
+  /* align to the right */
+  margin: 20px;
+  text-align: center;
+  /* keep "Applicant's Signature" centered under the line */
+}
+
+.signature {
+  margin-top: 30px;
+  /* space between text and line */
+}
+
+.submit {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.submit-button {
+  background-color: #2e2e2e;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 12px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 700px;
+  height: 60px;
+  /* prevent full width */
+}
+
+.submit-button:hover {
+  background-color: #535353ff;
+}
+
+.submit-button:active {
+  opacity: 0.3;
+}
+
+.js-submit-error {
+  margin-top: 10px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+}
+
+.output {
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 5px;
+  width: 100%;
+  font-size: 14px;
+}
